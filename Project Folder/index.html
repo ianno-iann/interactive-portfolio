@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Interactive Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <button id="themeToggle">🌗 Toggle Dark/Light</button>
+  </header>
+
+  <section id="projects">
+    <h2>Project Gallery</h2>
+    <div class="filter-bar">
+      <button class="filter-btn" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="js">JavaScript</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+    <div id="projectGallery">
+      <!-- Web Projects -->
+      <div class="project" data-category="web">
+        <div class="thumb">🌐</div>
+        <h3>Personal Landing Page</h3>
+        <a href="https://github.com/yourusername/landing-page" target="_blank">View Project</a>
+      </div>
+      <div class="project" data-category="web">
+        <div class="thumb">🎨</div>
+        <h3>CSS Card Design</h3>
+        <a href="https://github.com/ianno-iann/css-card" target="_blank">View Project</a>
+      </div>
+      <!-- JavaScript Projects -->
+      <div class="project" data-category="js">
+        <div class="thumb">🧮</div>
+        <h3>Calculator</h3>
+        <a href="https://github.com/ianno-iann/js-calculator" target="_blank">View Project</a>
+      </div>
+      <div class="project" data-category="js">
+        <div class="thumb">🎮</div>
+        <h3>Rock-Paper-Scissors</h3>
+        <a href="https://github.com/ianno-iann/rps-game" target="_blank">View Project</a>
+      </div>
+      <!-- Design Project -->
+      <div class="project" data-category="design">
+        <div class="thumb">✨</div>
+        <h3>Animated Navbar</h3>
+        <a href="https://github.com/ianno-iann/animated-navbar" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" autocomplete="off">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <textarea id="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+      <div id="formMsg"></div>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

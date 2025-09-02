@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #222;
+  color: #eee;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background: #f5f5f5;
+}
+
+body.dark-mode header {
+  background: #333;
+}
+
+h1, h2 {
+  margin: 0.5em 0;
+}
+
+.filter-bar {
+  margin-bottom: 1em;
+}
+
+.filter-btn {
+  margin-right: 0.5em;
+  padding: 0.5em 1em;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #2196f3;
+  color: #fff;
+}
+
+#projectGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+}
+
+.project {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1em;
+  transition: box-shadow 0.2s;
+  text-align: center;
+}
+
+.project:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+body.dark-mode .project {
+  background: #333;
+  border-color: #555;
+}
+
+.thumb {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+#contact {
+  margin-top: 2em;
+  padding: 2em;
+  background: #f8f8f8;
+}
+
+body.dark-mode #contact {
+  background: #292929;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+  margin-bottom: 1em;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: 2px solid #888;
+}
+
+#contactForm button {
+  padding: 0.75em;
+  border: none;
+  background: #2196f3;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background: #1976d2;
+}
+
+#formMsg {
+  margin-top: 0.5em;
+  font-weight: bold;
+}

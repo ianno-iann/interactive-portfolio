@@ -1,0 +1,57 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f3f6fb;
+  color: #222;
+  margin: 0;
+  padding: 2em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.game-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(33, 150, 243, 0.08);
+  padding: 2em 1em 1em 1em;
+  text-align: center;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+}
+
+.choice {
+  font-size: 1.25em;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 6px;
+  background: #e3f2fd;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.choice:hover {
+  background: #90caf9;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5em;
+  font-size: 1.15em;
+}
+
+#result {
+  min-height: 2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
