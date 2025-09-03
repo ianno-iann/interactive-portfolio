@@ -59,3 +59,31 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     msg.style.color = "red";
   }
 });
+const form = document.getElementById("contactForm");
+const formMsg = document.getElementById("formMsg");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  formMsg.textContent = "Sending...";
+  formMsg.style.color = "#0ea5e9";
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      formMsg.textContent = "✅ Message sent! I’ll get back to you soon.";
+      formMsg.style.color = "green";
+      form.reset();
+    } else {
+      formMsg.textContent = "❌ Something went wrong. Please try again.";
+      formMsg.style.color = "red";
+    }
+  } catch {
+    formMsg.textContent = "⚠️ Network error. Please try again.";
+    formMsg.style.color = "red";
+  }
+});

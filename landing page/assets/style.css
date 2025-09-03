@@ -1,0 +1,230 @@
+/* ====== Global Styles ====== */
+:root {
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --header-bg: #1e293b;
+  --header-text: #f1f5f9;
+  --text: #1e293b;
+  --brand: #0077b5;
+  --brand-dark: #005582;
+  --border: #e2e8f0;
+  --focus: rgba(0, 119, 181, 0.25);
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+/* ====== Header ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header nav a {
+  color: var(--header-text);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--brand);
+}
+
+/* ====== About Section ====== */
+#about {
+  margin: 50px auto;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 220px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* ====== Experience & Education ====== */
+section {
+  margin: 50px auto;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: var(--brand-dark);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  padding: 15px;
+  border-left: 3px solid var(--brand);
+  background: var(--bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.timeline-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.timeline-item .date {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+/* ====== Footer ====== */
+footer {
+  margin-top: 50px;
+  padding: 2.5rem 1rem;
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-radius: 20px 20px 0 0;
+}
+
+/* Flex container for left/right layout */
+footer .footer-container {
+  display: flex;
+  justify-content: space-between; /* Spread left & right */
+  align-items: center;            /* Vertical alignment */
+  gap: 20px;
+  flex-wrap: wrap;                /* Stack on small screens */
+}
+
+/* Contact info on left */
+footer .contact-info {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+footer .contact-info p {
+  margin: 6px 0;
+}
+
+footer .contact-info i {
+  color: var(--brand);
+  margin-right: 8px;
+}
+
+/* Social links on right */
+footer .social-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+footer .social-links a {
+  color: var(--header-text);
+  font-size: 1.3rem; /* clean smaller icons */
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer .social-links a:hover {
+  color: var(--brand);
+  transform: scale(1.15);
+}
+
+/* Footer note under both */
+footer p {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  text-align: center;
+}
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-radius: 20px 20px 0 0;
+}
+
+footer .social-links {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+footer .social-links a {
+  color: var(--header-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+footer .social-links a i {
+  margin-right: 6px;
+}
+
+footer .social-links a:hover {
+  color: var(--brand);   /* brand color highlight */
+  transform: translateY(-2px); /* subtle lift */
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ====== Smooth Scroll ====== */
+html {
+  scroll-behavior: smooth;
+}

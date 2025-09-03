@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>JavaScript Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semi-Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>JavaScript Calculator</h1>
   <div class="calculator">
-    <input type="text" id="display" disabled />
-    <div class="buttons">
-      <button class="btn" data-val="7">7</button>
-      <button class="btn" data-val="8">8</button>
-      <button class="btn" data-val="9">9</button>
-      <button class="btn op" data-val="/">&#247;</button>
+    <div class="top-label"><em>Semi-Scientific</em></div>
 
-      <button class="btn" data-val="4">4</button>
-      <button class="btn" data-val="5">5</button>
-      <button class="btn" data-val="6">6</button>
-      <button class="btn op" data-val="*">&times;</button>
+    <!-- Display -->
+    <input type="text" id="display" class="display" disabled>
 
-      <button class="btn" data-val="1">1</button>
-      <button class="btn" data-val="2">2</button>
-      <button class="btn" data-val="3">3</button>
-      <button class="btn op" data-val="-">-</button>
+    <!-- Scientific buttons -->
+    <div class="scientific-btns">
+      <button class="func-btn" onclick="append('(')">(</button>
+      <button class="func-btn" onclick="append(')')">)</button>
+      <button class="func-btn" onclick="sqrt()">√</button>
+      <button class="func-btn" onclick="power2()">x²</button>
+      <button class="func-btn" onclick="powerY()">xʸ</button>
+      <button class="func-btn" onclick="factorial()">x!</button>
+      <button class="func-btn" onclick="log()">log</button>
+      <button class="func-btn" onclick="ln()">ln</button>
+      <button class="func-btn" onclick="append('Math.PI')">π</button>
+      <button class="func-btn" onclick="append('Math.E')">e</button>
+    </div>
 
-      <button class="btn" data-val="0">0</button>
-      <button class="btn" data-val=".">.</button>
-      <button class="btn" id="clear">C</button>
-      <button class="btn op" data-val="+">+</button>
+    <!-- Main buttons + operators -->
+    <div class="main-grid">
+      <div class="numbers">
+        <button class="num-btn" onclick="append('7')">7</button>
+        <button class="num-btn" onclick="append('8')">8</button>
+        <button class="num-btn" onclick="append('9')">9</button>
+        <button class="num-btn" onclick="append('4')">4</button>
+        <button class="num-btn" onclick="append('5')">5</button>
+        <button class="num-btn" onclick="append('6')">6</button>
+        <button class="num-btn" onclick="append('1')">1</button>
+        <button class="num-btn" onclick="append('2')">2</button>
+        <button class="num-btn" onclick="append('3')">3</button>
+        <button class="num-btn zero" onclick="append('0')">0</button>
+        <button class="num-btn" onclick="append('.')">.</button>
+        <button class="func-btn" onclick="clearAll()">C</button>
+        <button class="func-btn" onclick="backspace()">←</button>
+      </div>
 
-      <button class="btn equal" id="equals">=</button>
+      <div class="operators">
+        <button class="op-btn" onclick="append('/')">÷</button>
+        <button class="op-btn" onclick="append('*')">×</button>
+        <button class="op-btn" onclick="append('-')">–</button>
+        <button class="op-btn" onclick="append('+')">+</button>
+        <button class="equal" onclick="calculate()">=</button>
+      </div>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
